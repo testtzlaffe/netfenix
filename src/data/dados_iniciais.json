@@ -1,0 +1,125 @@
+{
+  "categorias": [
+    {
+      "titulo": "Front End",
+      "link": "https://www.alura.com.br/formacao-front-end",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "Formação de Front End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
+      },
+      "videos": [
+        {
+          "titulo": "O que é React JS?",
+          "url": "https://www.youtube.com/watch?v=6IuQUgeDPg0"
+        },
+        {
+          "titulo": "JavaScript Array Methods",
+          "url": "https://youtu.be/1n6P36taCK0"
+        },
+        {
+          "titulo": "Template string feliz #03",
+          "url": "https://www.youtube.com/watch?v=Tk7zoPpWeSI"
+        },
+        {
+          "titulo": "O que é JavaScript?",
+          "url": "https://www.youtube.com/watch?v=NaVSbnnV75Q"
+        },
+        {
+          "titulo": "Fazendo um player de vídeo com React",
+          "url": "https://www.youtube.com/watch?v=ZaYvwn9nBD4"
+        },
+        {
+          "titulo": "TypeScript, o início, de forma prática",
+          "url": "https://www.youtube.com/watch?v=0mYq5LrQN1s"
+        },
+        {
+          "titulo": "Efeito Stagger com React e Styled Components",
+          "url": "https://www.youtube.com/watch?v=HGrXz6vHngI"
+        },
+        {
+          "titulo": "Base para aprender os frameworks",
+          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+        }
+      ]
+    },
+    {
+      "titulo": "Back End",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Cursos de Back End na Alura",
+        "url": "https://www.alura.com.br/cursos-online-programacao"
+      },
+      "videos": [
+        {
+          "titulo": "Criando seu hello world com GraphQL ",
+          "url": "https://www.youtube.com/watch?v=RLP9MixVZvw"
+        },
+        {
+          "titulo": "O que é Node JS?",
+          "url": "https://www.youtube.com/watch?v=GKR6uSvEj8w"
+        },
+        {
+          "titulo": "Deno, o que vai acontecer?",
+          "url": "https://www.youtube.com/watch?v=Vw9BG9fauIE"
+        },
+        {
+          "titulo": "API: Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+        },
+        {
+          "titulo": "Entendendo Back-End para Iniciantes em Programação (Parte 1)",
+          "url": "https://www.youtube.com/watch?v=Qjk-cSW-jk4"
+        }
+      ]
+    },
+    {
+      "titulo": "DevOps",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      },
+      "videos": [
+        {
+          "titulo": "Kubernetes // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=mVL0nOM3AGo"
+        },
+        {
+          "titulo": "Containers // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=-pUZBovqRcU"
+        },
+        {
+          "titulo": "Entendendo 'Devops' para Iniciantes em Programação (Parte 1)",
+          "url": "https://www.youtube.com/watch?v=bwO8EZf0gLI"
+        },
+        {
+          "titulo": "Pipeline (CD/CI) // Dicionário do Programador",
+          "url": "https://www.youtube.com/watch?v=AZtTd3pFVTY"
+        }
+      ]
+    },
+    {
+      "titulo": "Filmes",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+        },
+        {
+          "titulo": "Gattaca",
+          "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+        },
+        {
+          "titulo": "A Chegada",
+          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+        },
+        {
+          "titulo": "Feitiço do Tempo",
+          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+        }
+      ]
+    }
+  ]
+}
