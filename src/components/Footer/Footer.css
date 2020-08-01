@@ -1,0 +1,11 @@
+.Footer--bronze {
+  border-top: 2px solid var(--bronze);
+}
+
+.Footer--ouro {
+  border-top: 2px solid var(--ouro);
+}
+
+.Footer--prata {
+  border-top: 2px solid var(--prata);
+}

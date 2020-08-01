@@ -7,12 +7,13 @@ import Footer from "../../components/Footer";
 
 function Home() {
   const [priority, setPriority] = useState([
-    { type: "frontend", category: 0, quantity: 0 },
-    { type: "backend", category: 1, quantity: 0 },
-    { type: "devops", category: 2, quantity: 0 },
+    { type: "bronze", category: 0, quantity: 0 },
+    { type: "ouro", category: 1, quantity: 0 },
+    { type: "prata", category: 2, quantity: 0 },
   ]);
 
   const [clicks, setClicks] = useState(0);
+  const [corPrincipal, setCorPrincipal] = useState("bronze");
 
   useEffect(() => {
     readLocalStorage();
@@ -23,14 +24,14 @@ function Home() {
   }, [clicks]);
 
   const readLocalStorage = () => {
-    const frontendLocalStorage = localStorage.getItem("frontend") || 0;
-    const backendLocalStorage = localStorage.getItem("backend") || 0;
-    const devopsLocalStorage = localStorage.getItem("devops") || 0;
+    const bronzeLocalStorage = localStorage.getItem("bronze") || 0;
+    const ouroLocalStorage = localStorage.getItem("ouro") || 0;
+    const prataLocalStorage = localStorage.getItem("prata") || 0;
 
     const newPriority = [
-      { type: "frontend", category: 0, quantity: Number(frontendLocalStorage) },
-      { type: "backend", category: 1, quantity: Number(backendLocalStorage) },
-      { type: "devops", category: 2, quantity: Number(devopsLocalStorage) },
+      { type: "bronze", category: 0, quantity: Number(bronzeLocalStorage) },
+      { type: "ouro", category: 1, quantity: Number(ouroLocalStorage) },
+      { type: "prata", category: 2, quantity: Number(prataLocalStorage) },
     ];
 
     const orderedPriority = newPriority.sort((a, b) => {
@@ -38,6 +39,7 @@ function Home() {
     });
 
     setPriority(orderedPriority);
+    setCorPrincipal(orderedPriority[0].type);
   };
 
   const handleVideoClick = (type) => {
@@ -48,7 +50,7 @@ function Home() {
 
   return (
     <div style={{ background: "#141414" }}>
-      <Menu />
+      <Menu cor={corPrincipal} />
 
       <BannerMain
         videoTitle={
@@ -58,25 +60,15 @@ function Home() {
         videoDescription={""}
       />
 
-      <Carousel
-        handleClick={() => handleVideoClick(priority[0].type)}
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[priority[0].category]}
-      />
+      {priority.map((item, indice) => (
+        <Carousel
+          handleClick={() => handleVideoClick(priority[indice].type)}
+          ignoreFirstVideo
+          category={dadosIniciais.categorias[priority[indice].category]}
+        />
+      ))}
 
-      <Carousel
-        handleClick={() => handleVideoClick(priority[1].type)}
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[priority[1].category]}
-      />
-
-      <Carousel
-        handleClick={() => handleVideoClick(priority[2].type)}
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[priority[2].category]}
-      />
-
-      <Footer />
+      <Footer cor={corPrincipal} />
     </div>
   );
 }

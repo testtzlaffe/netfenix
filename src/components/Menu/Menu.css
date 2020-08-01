@@ -24,8 +24,20 @@
   padding-right: 5%;
 
   background: var(--black);
-  border-bottom: 2px solid var(--primary);
 }
+
+.Menu--bronze {
+  border-bottom: 2px solid var(--bronze);
+}
+
+.Menu--prata {
+  border-bottom: 2px solid var(--prata);
+}
+
+.Menu--ouro {
+  border-bottom: 2px solid var(--ouro);
+}
+
 body {
   --bodyPaddingTop: 94px;
   padding-top: var(--bodyPaddingTop);
