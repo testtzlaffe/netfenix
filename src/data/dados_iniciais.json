@@ -99,7 +99,7 @@
       ]
     },
     {
-      "titulo": "Prata e demais",
+      "titulo": "Demais",
       "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#c0c0c0",
       "link_extra": {
@@ -116,12 +116,20 @@
           "url": "https://www.youtube.com/watch?v=fLZjJnSPft8"
         },
         {
+          "titulo": "O VERDADEIRO PODER DE ATENA!(SAORI KIDO)",
+          "url": "https://www.youtube.com/watch?v=KCKayRwnEqA"
+        },
+        {
           "titulo": "QUAL A VELOCIDADE MÁXIMA DOS CAVALEIROS DE PRATA?",
           "url": "https://www.youtube.com/watch?v=nF0FjuVCQ1E"
         },
         {
           "titulo": "10 FATOS SOBRE OS CAVALEIROS NEGROS QUE VÃO TE SURPREENDER!",
           "url": "https://www.youtube.com/watch?v=BUA87yuYKs4"
+        },
+        {
+          "titulo": "ALONE POSSUI SANGUE DOURADO? SEIKA E MARIN A GRANDE RELAÇÃO!",
+          "url": "https://www.youtube.com/watch?v=NoFTGeKLMEk"
         },
         {
           "titulo": "OS 7 GENERAIS MARINAS DE POSEIDON!",
