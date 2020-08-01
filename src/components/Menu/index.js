@@ -16,9 +16,9 @@ export default function Menu({ cor }) {
       <Link to="/">
         <img className="Logo" src={Logo} alt="Logo" />
       </Link>
-      <Button as={Link} cor={cor} to="/cadastro/video">
+      {/* <Button as={Link} cor={cor} to="/cadastro/video">
         Novo vídeo
-      </Button>
+      </Button> */}
     </nav>
   );
 }
