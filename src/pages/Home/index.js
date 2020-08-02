@@ -62,6 +62,7 @@ function Home() {
 
       {priority.map((item, indice) => (
         <Carousel
+          key={indice}
           handleClick={() => handleVideoClick(priority[indice].type)}
           ignoreFirstVideo
           category={dadosIniciais.categorias[priority[indice].category]}
