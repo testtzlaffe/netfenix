@@ -21,11 +21,11 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
       {!id && <p>Loading...</p>}
       {id && (
         <>
-          {videoUrl && (
+          {/* {videoUrl && (
             <Modal.Header>
               <VideoFormacao url={videoUrl} />
             </Modal.Header>
-          )}
+          )} */}
           <Modal.Body>
             <Modal.Title>{title}</Modal.Title>
             <p>{metaDescription.raw}</p>
