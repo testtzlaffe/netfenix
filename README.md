@@ -1,15 +1,13 @@
-<h1 align="center">
+<p align="center">
   <img alt="Logo" src="./src/assets/img/LogoBronze.png" />
-</h1>
+</p>
 <img alt="Página Inicial" src="./src/assets/img/netfenix2.png" />
-<br /><br />
+<br>
 <img alt="Página Formações" src="./src/assets/img/formacoes.png" />
-<br><br><br>
+<br>
 <div align="center">
     <img src="https://img.shields.io/badge/frontend-react-blue"/>
 </div>
-
-<br>
 
 <p align="center">
   <a href="#sobre">Sobre o projeto</a> | 
@@ -17,8 +15,6 @@
   <a href="#run">Rodando o projeto</a> | 
   <a href="#contato">Contato</a>
 </p>
-
-<br>
 
 <a id="sobre"></a>
 
