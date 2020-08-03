@@ -17,7 +17,7 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
     videoUrl,
   } = formacao;
   return (
-    <Modal show={isOpen} onHide={handleHideModal}>
+    <Modal className="modal" show={isOpen} onHide={handleHideModal}>
       {!id && <p>Loading...</p>}
       {id && (
         <>
@@ -29,19 +29,34 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
           <Modal.Body>
             <Modal.Title>{title}</Modal.Title>
             <p>{metaDescription.raw}</p>
-            <p>{`${estimatedTimeToFinish}h`}</p>
-            <p>{`${totalPublishedCourses} cursos`}</p>
-            <p>{`${totalVideos} vídeos extras`}</p>
-            <p>{`${totalPodcasts} podcasts`}</p>
-            <p>{`${totalPosts} artigo`}</p>
+            <div>
+              <span>{`${estimatedTimeToFinish}h`}</span>
+              <span> | {`${totalPublishedCourses} cursos`}</span>
+              {totalVideos > 1 && (
+                <span> | {`${totalVideos} vídeos extras`}</span>
+              )}
+              {totalVideos === 1 && (
+                <span> | {`${totalVideos} vídeo extra`}</span>
+              )}
+              {totalPodcasts > 1 && (
+                <span> | {`${totalPodcasts} podcasts`}</span>
+              )}
+              {totalPodcasts === 1 && (
+                <span> | {`${totalPodcasts} podcast`}</span>
+              )}
+              {totalPosts > 1 && <span> | {`${totalPosts} artigos`}</span>}
+              {totalPosts === 1 && <span> | {`${totalPosts} artigo`}</span>}
+            </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={handleHideModal}>Cancel</Button>
+            <Button variant="outline-secondary" onClick={handleHideModal}>
+              X
+            </Button>
             <Button
               as="a"
               target="_blank"
               href={`https://alura.com.br/formacao-${code}`}
-            >{`Acessar o site da Formação ${title}`}</Button>
+            >{`Acessar o site desta formação`}</Button>
           </Modal.Footer>
         </>
       )}

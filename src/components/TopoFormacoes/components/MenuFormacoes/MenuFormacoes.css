@@ -1,0 +1,16 @@
+.MenuFormacoes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voltar {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.voltar:focus,
+.voltar:hover {
+  color: #ccc;
+  text-decoration: none;
+  transform: translateY(1px);
+}

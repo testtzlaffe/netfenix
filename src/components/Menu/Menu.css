@@ -39,7 +39,7 @@
 }
 
 body {
-  --bodyPaddingTop: 94px;
+  --bodyPaddingTop: 0px;
   padding-top: var(--bodyPaddingTop);
 }
 @media (max-width: 800px) {
@@ -48,7 +48,7 @@ body {
     justify-content: center;
   }
   body {
-    --bodyPaddingTop: 40px;
+    --bodyPaddingTop: 00px;
     padding-top: var(--bodyPaddingTop);
   }
 }

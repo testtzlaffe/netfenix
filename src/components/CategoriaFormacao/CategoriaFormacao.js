@@ -7,10 +7,15 @@ import IconeInfraestrutura from "../../assets/img/infraestrutura.svg";
 import IconeProgramacao from "../../assets/img/programacao.svg";
 import IconeMarketingDigital from "../../assets/img/marketing-digital.svg";
 import IconeInovacaoGestao from "../../assets/img/inovacao-gestao.svg";
-
 import "./CategoriaFormacao.css";
 
-export default function CategoriaFormacao({ categoria, onClick }) {
+export default function CategoriaFormacao({
+  categoria,
+  onClick,
+  onCourseClick,
+  formacoes,
+  cor,
+}) {
   let Icone = null;
   const { categoryUrlName } = categoria;
   switch (categoryUrlName) {
@@ -41,10 +46,27 @@ export default function CategoriaFormacao({ categoria, onClick }) {
     default:
       Icone = IconeProgramacao;
   }
+
+  const formacoesFiltradas = formacoes.filter((formacao) => {
+    return formacao.categoryUrlName === categoryUrlName;
+  });
+
   return (
-    <div onClick={() => onClick(categoryUrlName)}>
+    <div onClick={() => onClick(categoryUrlName)} className="CategoriaFormacao">
       <img src={Icone} className="icone" alt="ícone" />
-      <span>{categoria.categoryName}</span>
+      <span className="spanFormacoes">{categoria.categoryName}</span>
+      <div className="formacaoContainer">
+        {formacoesFiltradas.map((formacao) => {
+          return (
+            <div
+              className="formacao"
+              onClick={() => onCourseClick(formacao.code)}
+            >
+              {formacao.title}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

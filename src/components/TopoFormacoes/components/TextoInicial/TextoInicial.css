@@ -1,0 +1,33 @@
+.titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.texto-icone {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.botao {
+  border-radius: 4px;
+  border: 0;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: var(--white);
+  color: var(--primaryb);
+  font-weight: bold;
+}
+
+.botao:hover,
+.botao:focus {
+  transform: translateY(1px);
+}

@@ -2,12 +2,23 @@ import React, { useState, useEffect, Fragment } from "react";
 import { Link } from "react-router-dom";
 import CategoriaFormacao from "../../components/CategoriaFormacao/CategoriaFormacao";
 import ModalFormacao from "../../components/Modal";
+import MenuFormacoes from "../../components/TopoFormacoes/components/MenuFormacoes";
+import PageDefault from "../../components/PageDefault";
+import TopoFormacoes from "../../components/TopoFormacoes";
+import "./Formacoes.css";
+import ListaFormacoes from "../../components/ListaFormacoes";
+import CardFormacao from "../../components/CardFormacao";
 
 export default function Formacoes() {
   const URLFORMACOES = "https://www.alura.com.br/api/formacoes";
   const URLBASE = "https://www.alura.com.br/api/formacao-";
   const [categoriasFormacoes, setCategoriasFormacoes] = useState([
-    { id: 1, categoryName: "Mobile", categoryUrlName: "mobile" },
+    {
+      id: 1,
+      categoryName: "Mobile",
+      categoryUrlName: "mobile",
+      color: "yellow",
+    },
     { id: 2, categoryName: "Programação", categoryUrlName: "programacao" },
     { id: 3, categoryName: "Front-end", categoryUrlName: "front-end" },
     {
@@ -66,6 +77,16 @@ export default function Formacoes() {
       });
   }
 
+  function handleCourseClick(formacaoCode) {
+    setFormacaoSelecionada({});
+    handleShowModal();
+    fetch(`${URLBASE}${formacaoCode}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setFormacaoSelecionada({ ...data });
+      });
+  }
+
   function handleShowModal() {
     setModalIsOpen(true);
   }
@@ -75,41 +96,31 @@ export default function Formacoes() {
   }
 
   return (
-    <>
-      <Link to="/">Netfenix</Link>
-      <h1>Formações e cursos de tecnologia</h1>
-      <h2>
-        Formações com conteúdo do mercado de trabalho: sequências de cursos e
-        conteúdo para você se capacitar em tecnologia e negócios digitais.
-      </h2>
-      <button>MATRICULE-SE E COMECE AGORA</button>
-      {categoriasFormacoes.map((categoria) => {
-        return (
-          <CategoriaFormacao
-            key={categoria.id}
-            categoria={categoria}
-            onClick={handleCategoryClick}
-          />
-        );
-      })}
+    <div className="Formacoes">
+      <TopoFormacoes />
+      <ListaFormacoes>
+        {categoriasFormacoes.map((categoria) => {
+          return (
+            <CardFormacao>
+              <CategoriaFormacao
+                className="CategoriaFormacao"
+                key={categoria.id}
+                categoria={categoria}
+                onClick={handleCategoryClick}
+                onCourseClick={handleCourseClick}
+                formacoes={formacoes}
+                cor={categoria.color}
+              />
+            </CardFormacao>
+          );
+        })}
+      </ListaFormacoes>
 
       <ModalFormacao
         isOpen={modalIsOpen}
         formacao={formacaoSelecionada}
         handleHideModal={handleHideModal}
       />
-
-      {formacoesFiltradas.map((formacao) => {
-        return (
-          <Fragment key={formacao.id}>
-            <h4>{formacao.title}</h4>
-
-            <button onClick={() => handleFormacaoClick(formacao.code)}>
-              + info
-            </button>
-          </Fragment>
-        );
-      })}
-    </>
+    </div>
   );
 }

@@ -18,6 +18,9 @@ const Button = styled.button`
     &:hover,
     &:focus {
       opacity: 0.5;
+      color: var(--${(props) => props.cor});
+      text-decoration: none;
+
       /* color: var(--white);
     border: var(--white); */
     }
@@ -33,6 +36,12 @@ const Button = styled.button`
     border-radius: 0;
     border: 0;
     text-align: center;
+
+    &:hover,
+    &:focus {
+      color: #ccc;
+      text-decoration: none;
+    }
   }
 `;
 
