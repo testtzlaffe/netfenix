@@ -40,7 +40,7 @@ export default function CategoriaFormacao({
     case "marketing-digital":
       Icone = IconeMarketingDigital;
       break;
-    case "inovaca-gestao":
+    case "inovacao-gestao":
       Icone = IconeInovacaoGestao;
       break;
     default:
