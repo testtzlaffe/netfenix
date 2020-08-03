@@ -8,6 +8,7 @@
 <div align="center">
     <img src="https://img.shields.io/badge/frontend-react-blue"/>
 </div>
+<br>
 
 <p align="center">
   <a href="#sobre">Sobre o projeto</a> | 
@@ -20,11 +21,13 @@
 
 ## :rocket: Sobre o projeto
 
-Este projeto foi desenvolvido na Imersão React da Alura. Trata-se de uma aplicação para apresentar alguns vídeos sobre os Cavaleiros do Zodíaco, por categorias "Cavaleiros de Ouro", "Cavaleiros de Bronze" e "Demais Cavaleiros".
+Este projeto foi desenvolvido na Imersão React da Alura. Trata-se de uma aplicação para apresentar alguns vídeos sobre os Cavaleiros do Zodíaco, por categorias "Ouro", "Bronze" e "Demais personagens".
 
-Além disso, criei uma página de formações da Alura, que consome uma API.
+A sequência de apresentação das categorias e as cores do site são alteradas a depender de qual categoria o usuário mais clica.
 
-[netfenix.vercel.app](https://netfenix.vercel.app)
+Além disso, criei uma página de formações da Alura, que consome uma API REST.
+
+Resultado disponível em [netfenix.vercel.app](https://netfenix.vercel.app).
 
 <a id="tecnologias"></a>
 
