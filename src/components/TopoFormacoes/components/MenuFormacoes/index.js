@@ -15,7 +15,7 @@ export default function MenuFormacoes() {
       </div>
       <div>
         <Link className="voltar" to="/">
-          Voltar para Netfenix
+          Voltar para NETFENIX
         </Link>
       </div>
     </div>

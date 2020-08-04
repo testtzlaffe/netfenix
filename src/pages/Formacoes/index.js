@@ -98,6 +98,7 @@ export default function Formacoes() {
   return (
     <div className="Formacoes">
       <TopoFormacoes />
+
       <ListaFormacoes>
         {categoriasFormacoes.map((categoria) => {
           return (

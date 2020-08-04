@@ -1,10 +1,14 @@
 import React from "react";
 import "./TextoInicial.css";
+import { FaGraduationCap } from "react-icons/fa";
 
 export default function TextoInicial() {
   return (
-    <div>
-      <div className="texto-icone">FORMAÇÕES</div>
+    <div className="TextoInicial">
+      <div className="titulo2">
+        <FaGraduationCap />
+        <span className="texto-icone">FORMAÇÕES</span>
+      </div>
       <div className="titulo">Formações e cursos de tecnologia</div>
       <div className="subtitulo">
         Formações com conteúdo do mercado de trabalho: sequências de cursos e
