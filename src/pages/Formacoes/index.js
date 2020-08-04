@@ -17,7 +17,7 @@ export default function Formacoes() {
       id: 1,
       categoryName: "Mobile",
       categoryUrlName: "mobile",
-      color: "yellow",
+      cor: "yellow",
     },
     { id: 2, categoryName: "Programação", categoryUrlName: "programacao" },
     { id: 3, categoryName: "Front-end", categoryUrlName: "front-end" },
@@ -69,7 +69,9 @@ export default function Formacoes() {
 
   function handleFormacaoClick(formacaoCode) {
     setFormacaoSelecionada({});
+
     handleShowModal();
+
     fetch(`${URLBASE}${formacaoCode}`)
       .then((response) => response.json())
       .then((data) => {
@@ -77,9 +79,11 @@ export default function Formacoes() {
       });
   }
 
-  function handleCourseClick(formacaoCode) {
+  function handleCourseClick(formacaoCode, color) {
     setFormacaoSelecionada({});
+
     handleShowModal();
+
     fetch(`${URLBASE}${formacaoCode}`)
       .then((response) => response.json())
       .then((data) => {

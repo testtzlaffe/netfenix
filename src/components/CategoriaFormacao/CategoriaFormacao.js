@@ -14,7 +14,6 @@ export default function CategoriaFormacao({
   onClick,
   onCourseClick,
   formacoes,
-  cor,
 }) {
   let Icone = null;
   const { categoryUrlName } = categoria;

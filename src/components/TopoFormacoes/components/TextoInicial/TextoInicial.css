@@ -43,5 +43,5 @@
 
 .botao:hover,
 .botao:focus {
-  transform: translateY(1px);
+  transform: translateY(2px);
 }

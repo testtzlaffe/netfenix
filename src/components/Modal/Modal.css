@@ -1,0 +1,29 @@
+.title {
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fechar {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+.fechar:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+.botaoFooter {
+  width: 100%;
+  padding: 10px;
+}
+
+.numerosModal {
+  color: #777;
+  font-size: 0.9rem;
+}

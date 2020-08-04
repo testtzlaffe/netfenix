@@ -1,9 +1,12 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Modal.css";
 import VideoFormacao from "../VideoFormacao";
 
-export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
+export default function ModalFormacao(props) {
+  const { isOpen, handleHideModal, formacao } = props;
+
   const {
     id,
     title,
@@ -16,9 +19,10 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
     totalVideos,
     videoUrl,
   } = formacao;
+
   return (
     <Modal className="modal" show={isOpen} onHide={handleHideModal}>
-      {!id && <p>Loading...</p>}
+      {!id && <p>Carregando dados da formação...</p>}
       {id && (
         <>
           {/* {videoUrl && (
@@ -27,9 +31,18 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
             </Modal.Header>
           )} */}
           <Modal.Body>
-            <Modal.Title>{title}</Modal.Title>
+            <Modal.Title>
+              <div className="titleContainer">
+                <div className="title">{title}</div>
+                <div>
+                  <span onClick={handleHideModal} className="fechar">
+                    Fechar
+                  </span>
+                </div>
+              </div>
+            </Modal.Title>
             <p>{metaDescription.raw}</p>
-            <div>
+            <div className="numerosModal">
               <span>{`${estimatedTimeToFinish}h`}</span>
               <span> | {`${totalPublishedCourses} cursos`}</span>
               {totalVideos > 1 && (
@@ -49,10 +62,8 @@ export default function ModalFormacao({ isOpen, handleHideModal, formacao }) {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="outline-secondary" onClick={handleHideModal}>
-              X
-            </Button>
             <Button
+              className="botaoFooter"
               as="a"
               target="_blank"
               href={`https://alura.com.br/formacao-${code}`}
