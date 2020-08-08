@@ -22,7 +22,7 @@ export default function ModalFormacao(props) {
 
   return (
     <Modal className="modal" show={isOpen} onHide={handleHideModal}>
-      {!id && <p>Carregando dados da formação...</p>}
+      {!id && <p> Carregando dados da formação...</p>}
       {id && (
         <>
           {/* {videoUrl && (
